@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>像素冒险闯关（Canvas）</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="topbar">
+        <div class="brand">像素冒险闯关</div>
+        <div class="tips">
+          <span><kbd>←</kbd><kbd>→</kbd> 移动</span>
+          <span><kbd>↑</kbd>/<kbd>Space</kbd> 跳跃</span>
+          <span><kbd>Z</kbd> 冲刺</span>
+          <span><kbd>R</kbd> 重开</span>
+        </div>
+      </header>
+
+      <main class="main">
+        <canvas id="game" width="960" height="540" aria-label="游戏画布"></canvas>
+        <div class="hud" aria-live="polite">
+          <div id="hudLeft" class="hudLeft"></div>
+          <div id="hudRight" class="hudRight"></div>
+        </div>
+        <div id="overlay" class="overlay hidden" role="dialog" aria-modal="true">
+          <div class="panel">
+            <div id="overlayTitle" class="title"></div>
+            <div id="overlayBody" class="body"></div>
+            <div class="actions">
+              <button id="btnStart" class="btn primary">开始游戏</button>
+              <button id="btnContinue" class="btn primary">继续</button>
+              <button id="btnRestart" class="btn">重开</button>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        无需安装依赖：双击打开本文件即可玩（建议用 Edge/Chrome）。
+      </footer>
+    </div>
+
+    <script src="./game.js"></script>
+  </body>
+</html>
